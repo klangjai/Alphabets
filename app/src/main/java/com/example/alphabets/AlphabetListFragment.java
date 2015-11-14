@@ -7,19 +7,16 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-import android.widget.SimpleAdapter;
 import android.widget.Toast;
 
 import com.example.alphabets.model.EnglishAlphabet;
-
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.List;
 
 /**
  * Created by Promlert on 11/8/2015.
  */
 public class AlphabetListFragment extends ListFragment {
+
+    private static final String TAG = "AlphabetListFragment";
 
     interface MyListener {
         public void onAlphabetListItemClicked(int position);
@@ -30,7 +27,7 @@ public class AlphabetListFragment extends ListFragment {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        Log.i(TAG,"onCreate");
 
 
         ArrayAdapter<EnglishAlphabet> adapter = new ArrayAdapter<>(

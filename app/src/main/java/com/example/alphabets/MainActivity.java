@@ -7,19 +7,21 @@ import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.example.alphabets.model.EnglishAlphabet;
-
 
 public class MainActivity extends AppCompatActivity
         implements AlphabetListFragment.MyListener {
+
+    private static final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Log.i(TAG,"onCreate");
     }
 
     private void loadFragment(int i) {
+        Log.i(TAG,"loadFragment");
         AlphabetFragment frag = AlphabetFragment.newInstance(i);
 
         FragmentManager fm = getSupportFragmentManager();
@@ -30,6 +32,8 @@ public class MainActivity extends AppCompatActivity
 
     @Override
     public void onAlphabetListItemClicked(int position) {
+        Log.i(TAG,"onItemClick");
+
         if (findViewById(R.id.fragment_container) == null) {
             // หน้าจอแนวตั้ง มีเฉพาะ List
             Intent i = new Intent(this, DetailActivity.class);

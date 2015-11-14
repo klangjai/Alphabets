@@ -1,7 +1,5 @@
 package com.example.alphabets;
 
-import android.content.res.AssetManager;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.util.Log;
@@ -12,9 +10,6 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.alphabets.model.EnglishAlphabet;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class AlphabetFragment extends Fragment {
 
@@ -54,7 +49,7 @@ public class AlphabetFragment extends Fragment {
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        Log.i(TAG,"onViewCreated");
+        Log.i(TAG, "onViewCreated");
         TextView tv = (TextView) view.findViewById(R.id.alphabet_textview);
         char letter = EnglishAlphabet.DATA[mAlphabetIndex].letter;
         tv.setText(String.valueOf(letter));

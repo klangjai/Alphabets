@@ -21,21 +21,35 @@ public class EnglishAlphabet {
         this.letter = letter;
         this.image = image;
     }
-    public static EnglishAlphabet[] DATA;
 
-
-
-    static {
-        DATA = new EnglishAlphabet[26];
-        DATA[0]= new EnglishAlphabet('A', R.drawable.arm);
-        DATA[1]= new EnglishAlphabet('B', R.drawable.blue);
-        DATA[2]= new EnglishAlphabet('C', R.drawable.cat);
-        DATA[3]= new EnglishAlphabet('D', R.drawable.dog);
-        DATA[4]= new EnglishAlphabet('E', R.drawable.ear);
-        DATA[5]= new EnglishAlphabet('F', R.drawable.foot);
-        DATA[6]= new EnglishAlphabet('G', R.drawable.grey);
-        DATA[7]= new EnglishAlphabet('H', R.drawable.hand);
-    }
+    static EnglishAlphabet DATA[] = {
+        new EnglishAlphabet('A', R.drawable.arm),
+        new EnglishAlphabet('B', R.drawable.blue),
+        new EnglishAlphabet('C', R.drawable.cat),
+        new EnglishAlphabet('D', R.drawable.dog),
+        new EnglishAlphabet('E', R.drawable.ear),
+        new EnglishAlphabet('F', R.drawable.foot),
+        new EnglishAlphabet('G', R.drawable.grey),
+        new EnglishAlphabet('H', R.drawable.hand),
+        new EnglishAlphabet('I', R.drawable.ink),
+        new EnglishAlphabet('J', R.drawable.jar),
+        new EnglishAlphabet('K', R.drawable.koala),
+        new EnglishAlphabet('L', R.drawable.lion),
+        new EnglishAlphabet('M', R.drawable.mouth),
+        new EnglishAlphabet('N', R.drawable.nose),
+        new EnglishAlphabet('O', R.drawable.owl),
+        new EnglishAlphabet('P', R.drawable.pig),
+        new EnglishAlphabet('Q', R.drawable.queen),
+        new EnglishAlphabet('R', R.drawable.rabbit),
+        new EnglishAlphabet('S', R.drawable.snake),
+        new EnglishAlphabet('T', R.drawable.tiger),
+        new EnglishAlphabet('U', R.drawable.unicorn),
+        new EnglishAlphabet('V', R.drawable.van),
+        new EnglishAlphabet('W', R.drawable.wood),
+        new EnglishAlphabet('X', R.drawable.xray),
+        new EnglishAlphabet('Y', R.drawable.yellow),
+        new EnglishAlphabet('Z', R.drawable.zoo)
+    };
 
     public String toString(){
         return String.valueOf(letter);
